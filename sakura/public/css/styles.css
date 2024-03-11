@@ -1,5 +1,90 @@
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+/* -----Fontes----- */
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
-h1 {
-    font-family: "Caveat", cursive;
+/*-----Cores----- */
+:root {
+    --temaEscuro: #0e0d0b;
+    --temaClaro: #fff0f4;
+    --corPrimaria: #f5c2be;
+    --corSecundaria: #fceec9;
+    --corTerciaria: #a73d3f;
+    --corQuarternaria: #b08447;
+    --fonteTitulos: "Caveat", cursive;
+    --fonteTextos: "Raleway", sans-serif;
+}
+/* -----Titulos----- */
+h1,
+h2,
+h3 {
+    font-family: var(--fontePrincipal);
+    font-weight: 700;
+}
+/* -----Textos----- */
+p,
+a {
+    font-family: var(--fonteTextos);
+}
+/*----- Temas -----*/
+body {
+    background-color: var(--temaClaro);
+    color: var(--temaEscuro);
+}
+body.dark-theme {
+    background-color: var(--temaEscuro);
+    color: var(--corQuarternaria);
+}
+
+body.dark-theme p,
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme a {
+    color: var(--corSecundaria);
+}
+body.dark-theme .tema {
+    border: 3px solid var(--corSecundaria);
+}
+
+/* -----Centralizar Site----- */
+.site {
+    width: 1200px;
+    margin: 0 auto;
+}
+/* -----Imagem 100%----- */
+img {
+    width: 100%;
+}
+
+/* -----Menu Navegacao----- */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    width: 200px;
+    height: 200px;
+}
+.lista-menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.lista-menu ul li {
+    list-style: none;
+}
+.lista-menu ul li a {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.tema {
+    display: flex;
+    height: 30px;
+    gap: 10px;
+    border: 3px solid var(--temaEscuro);
+    border-radius: 30px;
+}
+.lua {
+    display: none;
 }

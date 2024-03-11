@@ -22,12 +22,13 @@
     {{-- Css --}}
     <link rel="manifest" href="{{ asset('css/reset.css') }}">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+   
 
     <title>@yield('title')Sakura-Sushi </title>
 
 </head>
 <body>
     @yield('header')
-    
+    <script src="{{ asset('js/animacoes.js') }}" ></script>
 </body>
 </html>
