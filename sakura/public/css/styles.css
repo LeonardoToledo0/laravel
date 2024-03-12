@@ -87,10 +87,13 @@ header {
     box-shadow: var(--sombraPrimaria);
 }
 .menu-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
     height: 120px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .logo {
@@ -157,6 +160,8 @@ header {
     transition: all 7s ease-in-out;
 }
 .sobre-content {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -169,7 +174,7 @@ header {
     flex-direction: column;
 }
 .sobre-texto img {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .sobre-texto p {
     text-align: justify;
@@ -197,6 +202,132 @@ header {
     transition: all 3s ease-in-out;
     background: var(--corTerciaria);
     width: 100%;
-    height: 380px;
+    height: 400px;
     margin-top: -380px;
+}
+.sobre-foto {
+    margin: 10px auto;
+}
+/* -----Inicio Menu----- */
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+    height: auto;
+}
+
+.menu-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.menu-container .menu-card {
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: var(--temaEscuro);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.menu-container .menu-card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--corTerciaria);
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+.menu-container .menu-card:hover:before {
+    clip-path: circle(300px at 80% -20%);
+}
+
+.menu-container .menu-card:after {
+    content: "Sakura";
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 700;
+    font-style: italic;
+    color: rgba(167, 61, 63, 0.315);
+}
+
+.menu-container .menu-card .menu-imgBx {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+
+.menu-container .menu-card:hover .menu-imgBx {
+    top: 0%;
+    transform: translateY(0%);
+}
+
+.menu-container .menu-card .menu-imgBx img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    width: 270px;
+}
+
+.menu-container .menu-card .menu-contentBx {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+
+.menu-container .menu-card:hover .menu-contentBx {
+    height: 210px;
+}
+
+.menu-contentBx h2 {
+    position: relative;
+    font-weight: 600;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    color: var(--corPrimaria);
+    margin: 10px;
+}
+
+.menu-contentBx a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid var(--corPrimaria);
+    color: var(--corPrimaria);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+    margin-top: 0;
+}
+.menu-container .menu-card:hover .menu-contentBx a {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+}
+.menu-contentBx a:hover {
+    transition: all 0.5s ease;
+    background-color: var(--corPrimaria);
+    color: var(--corTerciaria);
 }

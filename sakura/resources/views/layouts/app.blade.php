@@ -37,6 +37,7 @@
     <!-- Seus scripts JS aqui -->
     <script src="{{ asset('https://code.jquery.com/jquery-3.7.1.min.js') }}"></script>
     <script src="{{ asset('js/slick.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
     <script src="{{ asset('js/animacoes.js') }}"></script>
 </body>
 
