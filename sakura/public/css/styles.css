@@ -18,7 +18,7 @@
 h1,
 h2,
 h3 {
-    font-family: var(--fontePrincipal);
+    font-family: var(--fonteTitulos);
     font-weight: 700;
 }
 /* -----Textos----- */
@@ -28,10 +28,12 @@ a {
 }
 /*----- Temas -----*/
 body {
+    transition: all 3s ease-in-out;
     background-color: var(--temaClaro);
     color: var(--temaEscuro);
 }
 body.dark-theme {
+    transition: all 3s ease-in-out;
     background-color: var(--temaEscuro);
     color: var(--corQuarternaria);
 }
@@ -39,9 +41,34 @@ body.dark-theme {
 body.dark-theme p,
 body.dark-theme h1,
 body.dark-theme h2,
-body.dark-theme h3,
-body.dark-theme a {
+body.dark-theme h3 {
+    transition: all 3s ease-in-out;
     color: var(--corSecundaria);
+}
+body.dark-theme .lista-menu ul li a {
+    color: var(--corSecundaria);
+    transition: all 3s ease-in-out;
+}
+body.dark-theme .sobre-faixa {
+    transition: all 3s ease-in-out;
+    background: var(--corQuarternaria);
+}
+body.dark-theme .h1 {
+    transition: all 3s ease-in-out;
+    border: 2px solid var(--corQuarternaria);
+}
+body.dark-theme .h2 {
+    transition: all 3s ease-in-out;
+    border: 2px solid var(--corQuarternaria);
+}
+body.dark-theme .sobre-texto a {
+    border: 2px solid var(--corSecundaria);
+    color: var(--corSecundaria);
+}
+body.dark-theme .sobre-texto a:hover {
+    transition: all 0.5s ease;
+    background-color: var(--corSecundaria);
+    color: var(--corQuarternaria);
 }
 
 /* -----Centralizar Site----- */
@@ -84,9 +111,11 @@ header {
     list-style: none;
 }
 .lista-menu ul li a {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
     margin: 20px;
+    color: var(--corTerciaria);
+    transition: all 3s ease-in-out;
 }
 .tema {
     display: flex;
@@ -96,4 +125,78 @@ header {
 .lua {
     display: none;
 }
-/* -----Inicio Banner----- */
+.banner {
+    overflow: hidden;
+}
+
+/* -----Inicio de Sobre  */
+.sobre {
+    width: 100%;
+    margin: 0 auto;
+}
+.sobre-titulo {
+    display: flex;
+}
+.sobre-titulo h2 {
+    text-align: center;
+    padding: 40px;
+    font-size: 56px;
+    color: var(--corTerciaria);
+    transition: all 3s ease-in-out;
+}
+.h1 {
+    margin-right: 30px;
+    transform: rotate(90deg);
+    border: 2px solid var(--corTerciaria);
+    transition: all 7s ease-in-out;
+}
+.h2 {
+    margin-left: 30px;
+    transform: rotate(90deg);
+    border: 2px solid var(--corTerciaria);
+    transition: all 7s ease-in-out;
+}
+.sobre-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.sobre-content div {
+    width: 30%;
+}
+.sobre-texto {
+    display: flex;
+    flex-direction: column;
+}
+.sobre-texto img {
+    margin-bottom: 30px;
+}
+.sobre-texto p {
+    text-align: justify;
+    line-height: 1.3em;
+    font-size: 1.3em;
+    font-weight: 500;
+    color: var(--corPrimaria);
+}
+.sobre-texto a {
+    padding: 10px 20px;
+    border: 2px solid var(--corPrimaria);
+    color: var(--corPrimaria);
+    margin: 20px 0;
+    font-weight: 700;
+    align-self: flex-end;
+    border-radius: 8px;
+}
+.sobre-texto a:hover {
+    transition: all 0.5s ease;
+    background-color: var(--corPrimaria);
+    color: var(--corTerciaria);
+}
+
+.sobre-faixa {
+    transition: all 3s ease-in-out;
+    background: var(--corTerciaria);
+    width: 100%;
+    height: 380px;
+    margin-top: -380px;
+}

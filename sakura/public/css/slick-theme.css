@@ -19,6 +19,7 @@
 /* Arrows */
 .slick-prev,
 .slick-next {
+    display: none;
     font-size: 0;
     line-height: 0;
 
@@ -45,6 +46,7 @@
 .slick-prev:focus,
 .slick-next:hover,
 .slick-next:focus {
+    display: none;
     color: transparent;
     outline: none;
     background: transparent;
@@ -62,6 +64,7 @@
 
 .slick-prev:before,
 .slick-next:before {
+    display: none;
     font-family: "slick";
     font-size: 20px;
     line-height: 1;
@@ -74,9 +77,11 @@
 }
 
 .slick-prev {
+    display: none;
     left: -25px;
 }
 [dir="rtl"] .slick-prev {
+    display: none;
     right: -25px;
     left: auto;
 }
@@ -88,9 +93,11 @@
 }
 
 .slick-next {
+    display: none;
     right: -25px;
 }
 [dir="rtl"] .slick-next {
+    display: none;
     right: auto;
     left: -25px;
 }
