@@ -20,7 +20,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon/favicon-16x16.png') }}">
     <link rel="stylesheet" href="{{ asset('favicon/manifest.json') }}">
     {{-- Css --}}
-    <link rel="manifest" href="{{ asset('css/reset.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/slick-theme.css') }}">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
    
 
@@ -28,7 +30,11 @@
 
 </head>
 <body>
-    @yield('header')
-    <script src="{{ asset('js/animacoes.js') }}" ></script>
+    
+        @yield('content')
+        
+<script src="{{ asset('https://code.jquery.com/jquery-3.7.1.min.js') }}" ></script>  
+<script src="{{ asset('js/slick.min.js') }}" ></script> 
+<script src="{{ asset('js/animacoes.js') }}" ></script>
 </body>
 </html>

@@ -11,6 +11,8 @@
     --corQuarternaria: #b08447;
     --fonteTitulos: "Caveat", cursive;
     --fonteTextos: "Raleway", sans-serif;
+    --sombraPrimaria: 0 2px 10px rgba(167, 61, 63, 0.1);
+    --sombraSecundaria: 0 2px 10px rgba(176, 132, 71, 0.1);
 }
 /* -----Titulos----- */
 h1,
@@ -41,9 +43,6 @@ body.dark-theme h3,
 body.dark-theme a {
     color: var(--corSecundaria);
 }
-body.dark-theme .tema {
-    border: 3px solid var(--corSecundaria);
-}
 
 /* -----Centralizar Site----- */
 .site {
@@ -57,19 +56,29 @@ img {
 
 /* -----Menu Navegacao----- */
 header {
+    width: 100%;
+    box-shadow: var(--sombraPrimaria);
+}
+.menu-header {
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .logo {
     width: 200px;
     height: 200px;
 }
-.lista-menu ul {
+.lista-menu {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.lista-menu ul {
+    display: flex;
 }
 .lista-menu ul li {
     list-style: none;
@@ -77,14 +86,14 @@ header {
 .lista-menu ul li a {
     font-size: 1.5rem;
     font-weight: 700;
+    margin: 20px;
 }
 .tema {
     display: flex;
     height: 30px;
     gap: 10px;
-    border: 3px solid var(--temaEscuro);
-    border-radius: 30px;
 }
 .lua {
     display: none;
 }
+/* -----Inicio Banner----- */
